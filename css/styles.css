@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --main-text-color: #4D4D4D;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: Inter;
-    color: black;
+    color: var(--main-text-color);
 }
 
 .logo {
@@ -61,7 +65,65 @@
 }
 
 .header_nav_bar .active {
-    color: black;
+    color: var(--main-text-color);
     background-size: 40% 2px;
     transition: background-size .3s;
+}
+
+.some_wraper{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.left_menu{
+    background-color: #5B2649;
+    width: 300px;
+}
+
+.hero_section{
+    gap: 50px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(231,231,231,1) 0%, rgba(176,176,176,1) 100%);
+    margin: 30px;
+    width: 100%;
+}
+
+.pink-heading{
+    color: #AA4CAF;
+}
+
+.hero_heading{
+    color: var(--main-text-color);
+    font-size: 64px;
+}
+
+.hero_description{
+    color: #717171;
+    font-size: 24px;
+}
+
+@media (min-width: 860px){
+    .hero_section{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 860px){
+    
+    .left_menu{
+        display: none;
+    }
+
+    .hero_info{
+        margin-bottom: 60px;
+    }
+
+    .hero_img{
+        width: 400px;
+        height: 400px;
+    }
 }
